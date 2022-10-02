@@ -14,21 +14,30 @@ Starting with a baseline model, we make use of a number of different classificat
 
 
 ## Business Problem
-As shown by the ongoing Coronavirus pandemic, the need for public acceptance of emergency health direction--such as getting vaccinated--is often met with an obstinate and suspicious populace.
-If we had a means of predicting who or what kind of person is likely to resist vaccination, we might be able to more effectively target our public relations and outreach campaigns.
-Here we develop a predictive model to help elucidate who is likely to not get an h1n1 vaccination and present our results to a local government agency (such as a public health department) concerned with promoting vaccination during pandemic events.
+▪ Problem: Vaccine hesitancy creates financial burden on healthcare system and insurance industry during pandemic
 
+▪ Objective: Lower hesitancy andincrease vaccine uptake as cost-effective means of lowering said burden
+
+▪ Solution: Use predictive modeling to determine who is less likely to get vaccinated, elucidate influencing factors, and target outreach according to recommendations
+ 
 
 ## Results and Analysis
-### Classification Modeling and Results (Test AUC)
-•	Logistic Regression:  0.8201
-•	Support Vector Machine: 0.8022
-•	Decision Tree: 0.8152
-•	Random Forest: 0.8190
-•	XGBClassifier: 0.8143
+### Classification Modeling and Results (Test Accuracy)
+•	Logistic Regression:  0.85
+•	Support Vector Machine: 0.84
+•	Decision Tree: 0.77
+•	Random Forest: 0.84
+•	XGBClassifier: 0.84
 •	GradientBoostingClassifier 
-    Before Tuning: 0.8286
-    After Tuning: 0.8316
+    Before Tuning: 0.84
+    After Tuning: 0.85
     
-Using our tuned GradientBoostingClassifier on the unseen test data, 
+For each model, our goal was to minimize false positives, since these were the cases that would ultimately fly under the detection radar and remain unvaccinated. False negative cases still ended up vaccinated, so their presence was not quite as much of a detriment to our overall goal of increasing vaccine uptake. 
 
+## Recommendations
+
+• Work with hospitals and doctors in network to develop effective dialogue regarding the importance of getting vaccinated
+
+• Social media campaigns to drive home the seriousness of illness, the effectiveness and safety of vaccination.
+
+• Cost saving offers for insured, no-cost for uninsured
